@@ -23,7 +23,7 @@ export default function Login({ setShowLogin, myStorage, setCurrentUser }) {
         }
 
         try {
-            const res = await axios.post("http://localhost:8800/api/users/login", user);
+            const res = await axios.post("https://travel-pin.onrender.com/api/users/login", user);
             myStorage.setItem("user", res.data.username);
             setCurrentUser(res.data.username);
             setShowLogin(false);

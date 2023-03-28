@@ -47,7 +47,7 @@ function App() {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/pins");
+        const res = await axios.get("https://travel-pin.onrender.com/api/pins");
         setPins(res.data);
       } catch (err) {
         console.log(err)
@@ -82,7 +82,7 @@ function App() {
     }
 
     try {
-      const res = await axios.post("http://localhost:8800/api/pins", newPin);
+      const res = await axios.post("https://travel-pin.onrender.com/api/pins", newPin);
       setPins([...pins, res.data])
       setNewPlace(null);
     } catch (err) {
